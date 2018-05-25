@@ -20,7 +20,6 @@ public class RomansConverter {
 	public String convert(int input) {
 
 		while (input > 0) {
-
 			int lagestDivider = getLargestDivider(input);
 			input = input - lagestDivider;
 
@@ -31,27 +30,23 @@ public class RomansConverter {
 				result += arabic2romans.get(lagestDivider);
 			}
 		}
-
 		return result;
 	}
 
-	public int getLargestDivider(int number) {
+	private int getLargestDivider(int number) {
 
 		for (int i = arabicImportant.length - 1; i >= 0; i--) {
 			if (number / arabicImportant[i] >= 1 || ((number + getLowerTens(number)) / arabicImportant[i]) >= 1)
 				return arabicImportant[i];
 		}
 		return 0;
-
 	}
 
-	public int getLowerTens(int number) {
+	private int getLowerTens(int number) {
 		for (int i = arabicImportant.length - 1; i > 0; i--) {
-			if (arabicImportant[i - 1] < number && Integer.toString(arabicImportant[i - 1]).startsWith("1")) {
+			if (arabicImportant[i - 1] < number && Integer.toString(arabicImportant[i - 1]).startsWith("1"))
 				return arabicImportant[i - 1];
-			}
 		}
 		return 0;
 	}
-
 }

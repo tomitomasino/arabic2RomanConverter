@@ -15,41 +15,6 @@ public class TestRomanConverter {
 
 	
 	@Test
-	public void shouldReturnlagestDivider10When10() {
-		Assertions.assertThat(converter.getLargestDivider(10)).isEqualTo(10);
-	}
-	
-	
-	@Test
-	public void shouldReturnlagestDivider1When1() {
-		Assertions.assertThat(converter.getLargestDivider(1)).isEqualTo(1);
-	}
-	
-	
-	@Test
-	public void shouldReturnlagestDivider10When9() {
-		Assertions.assertThat(converter.getLargestDivider(1)).isEqualTo(1);
-	}
-	
-	@Test
-	public void shouldReturnlagestDivider5When4() {
-		Assertions.assertThat(converter.getLargestDivider(4)).isEqualTo(5);
-	}
-	
-	
-	@Test
-	public void shouldReturnlagestDivider50When61() {
-		Assertions.assertThat(converter.getLargestDivider(61)).isEqualTo(50);
-	}
-	
-	@Test
-	public void shouldReturnLowerTens() {
-
-		Assertions.assertThat(converter.getLowerTens(10)).isEqualTo(1);		
-	}
-	
-	
-	@Test
 	public void shoudReturnIWhen1() {
 
 		Assertions.assertThat(converter.convert(1)).isEqualTo("I");
@@ -199,6 +164,40 @@ public class TestRomanConverter {
 
 		Assertions.assertThat(converter.convert(61)).isEqualTo("LXI");
 	}
-
+	
+//	@Test
+//	public void shouldReturnlagestDivider10When10() {
+//		Assertions.assertThat(converter.getLargestDivider(10)).isEqualTo(10);
+//	}
+//	
+//	
+//	@Test
+//	public void shouldReturnlagestDivider1When1() {
+//		Assertions.assertThat(converter.getLargestDivider(1)).isEqualTo(1);
+//	}
+//	
+//	
+//	@Test
+//	public void shouldReturnlagestDivider10When9() {
+//		Assertions.assertThat(converter.getLargestDivider(9)).isEqualTo(10);
+//	}
+//	
+//	@Test
+//	public void shouldReturnlagestDivider5When4() {
+//		Assertions.assertThat(converter.getLargestDivider(4)).isEqualTo(5);
+//	}
+//	
+//	
+//	@Test
+//	public void shouldReturnlagestDivider50When61() {
+//		Assertions.assertThat(converter.getLargestDivider(61)).isEqualTo(50);
+//	}
+//	
+//	@Test
+//	public void shouldReturnLowerTens() {
+//
+//		Assertions.assertThat(converter.getLowerTens(10)).isEqualTo(1);		
+//	}
+//	
 	
 }
